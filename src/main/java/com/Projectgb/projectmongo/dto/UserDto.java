@@ -2,6 +2,8 @@ package com.Projectgb.projectmongo.dto;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+
 import com.Projectgb.projectmongo.domain.User;
 
 import lombok.Getter;
@@ -15,6 +17,7 @@ public class UserDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @Id
     private String id;
     private String name;
     private String email;

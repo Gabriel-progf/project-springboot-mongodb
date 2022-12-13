@@ -21,9 +21,9 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @EqualsAndHashCode.Include
     @Id
     private String id;
+    @EqualsAndHashCode.Include
     private String name;
     private String email;
 }
