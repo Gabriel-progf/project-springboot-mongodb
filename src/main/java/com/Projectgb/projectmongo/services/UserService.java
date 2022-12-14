@@ -38,12 +38,12 @@ public class UserService {
 
     }
 
-    public void delete(String id){
+    public void delete(String id) {
         try {
             repository.deleteById(id);
-        } catch (EmptyResultDataAccessException e){
+        } catch (EmptyResultDataAccessException e) {
             throw new ObjectNotFoundException("Not found id: " + id);
-        } catch (DataIntegrityViolationException e){
+        } catch (DataIntegrityViolationException e) {
             throw new DataBaseException(e.getMessage());
         }
     }
@@ -52,7 +52,7 @@ public class UserService {
         return new User(userDto.getId(), userDto.getName(), userDto.getEmail());
     }
 
-    public Boolean existById(String id){
+    public Boolean existById(String id) {
         return repository.existsById(id);
     }
 
