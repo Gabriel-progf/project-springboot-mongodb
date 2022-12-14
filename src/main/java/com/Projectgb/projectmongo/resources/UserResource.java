@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.Projectgb.projectmongo.domain.Post;
 import com.Projectgb.projectmongo.domain.User;
 import com.Projectgb.projectmongo.dto.UserDto;
 import com.Projectgb.projectmongo.services.UserService;
@@ -71,6 +73,12 @@ public class UserResource {
         service.delete(id);
         return ResponseEntity.noContent().build();
 
+    }
+
+    @GetMapping("/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User user = service.findByid(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 
 }
