@@ -22,7 +22,7 @@ public class URL {
         sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
         try {
             return sdf.parse(textDate);
-        } catch (ParseException e){
+        } catch (ParseException e) {
             return defaoultValue;
         }
 

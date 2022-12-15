@@ -12,10 +12,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class CommentDto implements Serializable{
+public class CommentDto implements Serializable {
 
     private String text;
     private Date date;
     private AuthorDto author;
-    
+
 }

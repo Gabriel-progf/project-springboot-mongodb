@@ -12,13 +12,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StandardError implements Serializable {
-    
+
     private Long timestamp;
     private Integer status;
     private String error;
     private String message;
     private String path;
-
-
 
 }
