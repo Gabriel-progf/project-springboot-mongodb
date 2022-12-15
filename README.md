@@ -11,7 +11,6 @@ O projeto consiste em uma aplicação Back End de um sistema de Posts com seus r
 ## Back end
 - Java
 - Spring Boot
-- JPA/Hibernate
 - Maven
 - API REST
 
